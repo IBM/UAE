@@ -78,9 +78,8 @@ if __name__ == "__main__":
             
             print(i)
            
-            attack = MINE_MinMax_unsupervised(sess, model, batch_size=1, max_iterations=20, confidence=0, 
-                targeted=False, epsilon=1,aa=str(i))
-            adv, Mi= attack.attack(inputs[i:i+315], targets[i:i+315])
+            attack = MINE_MinMax_unsupervised(sess, model, batch_size=1, max_iterations=20, epsilon=1.0)
+            adv, Mi= attack.attack(inputs, targets)
          
             for j in range(adv.shape[0]):
                 image[i-start+j] = adv[j].reshape(1,32,32,3)
