@@ -1,9 +1,5 @@
-## l2_attack.py -- attack a network optimizing for l_2 distance
-##
-## Copyright (C) 2016, Nicholas Carlini <nicholas@carlini.com>.
-##
-## This program is licenced under the BSD 2-Clause licence,
-## contained in the LICENCE file in this directory.
+# contrast_attack.py -- It performs MINE-UAE attack.
+# author: Chia-Yi Hsu
 
 import sys,time
 import tensorflow.compat.v1 as tf
