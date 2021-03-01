@@ -1,5 +1,5 @@
 # Supervised Attack
-Code for MINE-based attack of MinMax and Binary Search algorithms
+Code for MINE-based supervised attack of MinMax and Binary Search algorithms
 
 # Software Version
 The program is developed under Tensorflow-gpu 1.12.0. Note that we use Keras embedded inside Tensorflow.
