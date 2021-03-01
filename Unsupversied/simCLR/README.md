@@ -6,7 +6,7 @@ We use code of "A Simple Framework for Contrastive Learning of Visual Representa
 The dataset **CIFAR-10** will be downloaded automatically when you use them first time.
 
 # Classifier
-Using code from https://github.com/google-research/simclr, it run
+Using code from https://github.com/google-research/simclr, it runs
 ```python
 python run.py --train_mode=pretrain \
   --train_batch_size=512 --train_epochs=1000 \
