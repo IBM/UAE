@@ -36,5 +36,5 @@ from supervised_attack import MINE_supervised
 MINE_supervised(sess, model,batch_size=1, max_iterations=1000, confidence=0, 
             targeted=False, epsilon=1.0, mine_batch='conv').attack(inputs, targets)
 ```
-where inputs are a tensor (batch, height, weight, channel) and targets are a tensor (batch, classes). In MINE-based attack ($L_\infty$ attack), we only can use ```batch_size=1``` and set perturbation level $\epsilon$ by ```epsilon=XX```. To use MINE, you can generate a batch samples by convolution output with using ```mine_batch = 'conv'``` or generate a batch by random sampling with ```mine_batch='random_sampling'```. It runs untargeted attack by setting```target=False```.
+where inputs are a tensor (batch, height, weight, channel) and targets are a tensor (batch, classes). In MINE-based attack ($L_{\infty}$ attack), we only can use ```batch_size=1``` and set perturbation level $\epsilon$ by ```epsilon=XX```. To use MINE, you can generate a batch samples by convolution output with using ```mine_batch = 'conv'``` or generate a batch by random sampling with ```mine_batch='random_sampling'```. It runs untargeted attack by setting```target=False```.
 
