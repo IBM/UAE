@@ -48,8 +48,12 @@ class CIFAR:
         
         self.test_data, self.test_labels = load_batch("cifar-10-batches-bin/test_batch.bin")
         
-        self.train_data = train_data
-        self.train_labels = train_labels
+        VALIDATION_SIZE = 5000
+        
+        self.validation_data = train_data[:VALIDATION_SIZE, :, :, :]
+        self.validation_labels = train_labels[:VALIDATION_SIZE]
+        self.train_data = train_data[VALIDATION_SIZE:, :, :, :]
+        self.train_labels = train_labels[VALIDATION_SIZE:]
 
 class CIFARModel:
     def __init__(self, restore, session=None):
