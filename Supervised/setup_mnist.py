@@ -50,8 +50,13 @@ class MNIST:
         self.test_data = extract_data("data/t10k-images-idx3-ubyte.gz", 10000)+0.5
         self.test_labels = extract_labels("data/t10k-labels-idx1-ubyte.gz", 10000)
         
-        self.train_data = train_data
-        self.train_labels = train_labels
+        VALIDATION_SIZE = 5000
+        
+        self.validation_data = train_data[:VALIDATION_SIZE, :, :, :]
+        self.validation_labels = train_labels[:VALIDATION_SIZE]
+        self.train_data = train_data[VALIDATION_SIZE:, :, :, :]
+        self.train_labels = train_labels[VALIDATION_SIZE:]
+
 
 
 class MNISTModel:
